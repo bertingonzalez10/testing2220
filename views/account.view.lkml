@@ -32,7 +32,7 @@ view: account {
     sql: ${TABLE}.name ;;
   }
 
-  measure: count {
+  measure: countt {
     type: count
     drill_fields: [id, name]
   }
