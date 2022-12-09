@@ -25,6 +25,10 @@ view: orders {
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
+    link: {
+      label: "Business Pulse By State Dashboard"
+      url: "https://gcpl2220.cloud.looker.com/dashboards/68?State={{ _filters['orders.status'] | url_encode }}"
+    }
   }
 
   dimension: user_id {
