@@ -46,7 +46,7 @@ view: order_items {
 
   dimension_group: pruebafecha {
     type: duration
-    intervals: [hour, day, week, month, quarter, year]
+    intervals: [hour, year ]
     sql_start: ${returned_date} ;;
     sql_end: CURRENT_TIMESTAMP();;
   }
