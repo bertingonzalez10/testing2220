@@ -46,13 +46,13 @@ view: order_items {
 
   dimension_group: start {
     type: time
-    sql: {TABLE}.returned_at ;;
+    sql: {orders}.returned_at ;;
 
   }
 
   dimension_group: end {
     type: time
-    sql: {TABLE}.returned_at ;;
+    sql: {orders}.returned_at ;;
 
   }
 
