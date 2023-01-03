@@ -45,17 +45,10 @@ view: order_items {
   }
 
   dimension_group: start {
-    type: time
-    sql: ${TABLE}.returned_at ;;
-
+    type: duration
+    sql_start: ${TABLE}.created ;;
+    sql_end: ${TABLE}.returned_at ;;
   }
-
-  dimension_group: end {
-    type: time
-    sql: ${TABLE}.returned_at ;;
-
-  }
-
 
 
   dimension: sale_price {
