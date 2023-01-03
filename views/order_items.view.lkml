@@ -45,9 +45,10 @@ view: order_items {
   }
 
   dimension_group: start {
-    type: duration
-    sql_start: ${TABLE}.created ;;
-    sql_end: ${TABLE}.returned_at ;;
+    type: time
+
+    timeframes: [date, week, month]
+    sql: ${TABLE}.created_at ;;
   }
 
 
