@@ -44,6 +44,13 @@ view: order_items {
     sql: ${TABLE}.returned_at ;;
   }
 
+  dimension_group: pruebafecha {
+    type: duration
+    intervals: [hour, day, week, month, quarter, year]
+    sql_start: ${returned_date} ;;
+    sql_end: CURRENT_TIMESTAMP();;
+  }
+
   dimension: sale_price {
     type: number
     sql: ${TABLE}.sale_price ;;
